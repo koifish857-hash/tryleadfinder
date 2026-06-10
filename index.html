@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeadFinder - B2B Lead Finder for Micro Agencies</title>
+    <meta
+      name="description"
+      content="LeadFinder finds local businesses with visible growth problems and turns them into qualified outreach opportunities for micro agencies."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="LeadFinder home">
+        <span class="brand-mark">L</span>
+        <span>LeadFinder</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#demo">Demo</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <a class="nav-cta" href="#pricing">Start for $39</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Built for solo consultants and micro agencies</p>
+          <h1>Find local businesses that already need your service.</h1>
+          <p class="hero-text">
+            LeadFinder scans public business signals, scores sales opportunities, and gives you a ready-to-send
+            outreach angle every week.
+          </p>
+          <form class="hero-form" id="waitlistForm">
+            <label class="sr-only" for="email">Work email</label>
+            <input id="email" name="email" type="email" placeholder="you@agency.com" required />
+            <button type="submit">Get sample leads</button>
+          </form>
+          <p class="microcopy" id="formMessage">No credit card. We send one free sample pack first.</p>
+          <div class="proof-strip" aria-label="Product highlights">
+            <span>Problem signals</span>
+            <span>Fit scores</span>
+            <span>Cold email openers</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img
+            src="assets/leadfinder-dashboard.png"
+            alt="LeadFinder dashboard showing scored business leads and outreach opportunities"
+          />
+        </div>
+      </section>
+
+      <section class="demo" id="demo">
+        <div class="section-heading">
+          <p class="eyebrow">Try the lead brief</p>
+          <h2>Pick a niche and see what buyers would receive.</h2>
+        </div>
+        <div class="demo-layout">
+          <form class="lead-builder" id="leadForm">
+            <label for="niche">Target niche</label>
+            <select id="niche" name="niche">
+              <option value="dentists">Dentists with outdated websites</option>
+              <option value="gyms">Local gyms with weak reviews</option>
+              <option value="shopify">Shopify stores missing retention basics</option>
+            </select>
+
+            <label for="location">Market</label>
+            <input id="location" name="location" type="text" value="Austin, Texas" />
+
+            <label for="offer">Your offer</label>
+            <select id="offer" name="offer">
+              <option>Website redesign</option>
+              <option>Review generation</option>
+              <option>Email marketing setup</option>
+            </select>
+
+            <button type="submit">Generate lead pack</button>
+          </form>
+          <div class="results-panel" aria-live="polite">
+            <div class="results-header">
+              <div>
+                <p class="panel-label">Sample pack</p>
+                <h3 id="packTitle">Dentists in Austin, Texas</h3>
+              </div>
+              <button class="ghost-button" id="exportButton" type="button">Export CSV</button>
+            </div>
+            <div class="lead-list" id="leadList"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="workflow" id="how">
+        <div class="section-heading">
+          <p class="eyebrow">Simple weekly workflow</p>
+          <h2>Configure once. Sell from the brief.</h2>
+        </div>
+        <div class="steps">
+          <article>
+            <span>01</span>
+            <h3>Choose a market</h3>
+            <p>Define the niche, city, and problem signals that match your agency offer.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Review scored leads</h3>
+            <p>Each lead includes public signals, a fit score, and why they may be ready to buy.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Send sharper outreach</h3>
+            <p>Use the personalized opener to start with a real business problem instead of a generic pitch.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pricing" id="pricing">
+        <div class="section-heading">
+          <p class="eyebrow">Validation pricing</p>
+          <h2>Charge for qualified opportunities, not another CRM.</h2>
+        </div>
+        <div class="price-grid">
+          <article class="price-card">
+            <h3>Starter</h3>
+            <p class="price">$39<span>/mo</span></p>
+            <p>100 leads per month for one niche and one market.</p>
+            <a href="mailto:hello@tryleadfinder.com?subject=LeadFinder%20Starter">Reserve Starter</a>
+          </article>
+          <article class="price-card featured">
+            <p class="badge">Best test</p>
+            <h3>Agency</h3>
+            <p class="price">$99<span>/mo</span></p>
+            <p>500 leads, CSV export, weekly briefs, and outreach angles.</p>
+            <a href="mailto:hello@tryleadfinder.com?subject=LeadFinder%20Agency">Reserve Agency</a>
+          </article>
+          <article class="price-card">
+            <h3>Custom</h3>
+            <p class="price">$199<span>/mo</span></p>
+            <p>High-intent lead research for multiple niches or regions.</p>
+            <a href="mailto:hello@tryleadfinder.com?subject=LeadFinder%20Custom">Reserve Custom</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>LeadFinder</span>
+      <span>Manual-first MVP for paid lead validation.</span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
